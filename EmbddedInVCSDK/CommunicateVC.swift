@@ -12,7 +12,7 @@ public protocol CommunicateVCDelegate : AnyObject {
     func getIFrameUrl(urlData:String)
 }
 public class CommunicateVC:NSObject {
-    var baseUrlId : String?
+    var baseUrlId = ""
     var projectIdVal = ""
     var hostEmailId = ""
     var myUrl = ""
@@ -49,7 +49,7 @@ public class CommunicateVC:NSObject {
    
     func verifyToken(token:String) {
         var url:String!
-        url = "\(baseUrlId ?? "" + "tokenVerification")"
+        url = "\(baseUrlId + "tokenVerification")"
         let body = ["projectId": projectIdVal, "token": token]
         Alamofire.request(url, method: .post,parameters: body, encoding: JSONEncoding.default)
             .responseJSON { [self] response in
@@ -68,7 +68,7 @@ public class CommunicateVC:NSObject {
     
     func createSession(token:String) {
         var url:String!
-        url = "\(baseUrlId ?? "" + "createSession")"
+        url = "\(baseUrlId + "createSession")"
         let obj = ["meetingName": "session",
                    "meetingId": "ba24334d-la3j-sdede-a2343-b12345",
                    "hostEmail":hostEmailId,
@@ -100,7 +100,7 @@ public class CommunicateVC:NSObject {
     }
     func getWebUrl(sessionId:String, token:String){
         var url:String!
-        url = "\(baseUrlId ?? "" + "getTemplateDataById?projectId=\(projectIdVal)")"
+        url = "\(baseUrlId + "getTemplateDataById?projectId=\(projectIdVal)")"
         Alamofire.request(url, method: .get,parameters: nil, encoding: JSONEncoding.default)
             .responseJSON { [self] response in
                 switch (response.result) {
