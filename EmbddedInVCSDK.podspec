@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
  
   
 
-  spec.source_files  = "EmbddedInVCSDK/*.{h,swift}"
+  spec.source_files  = "EmbddedInVCSDK/*.{h}"
   spec.exclude_files = "Classes/Exclude"
 
      spec.dependency "Alamofire"
