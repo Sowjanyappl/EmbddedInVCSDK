@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "EmbddedInVCSDK"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.1"
   spec.summary      = "A short description of EmbddedInVCSDK."
 
   
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
  
   
 
-  spec.source_files  = "Classes", "Classes/**/*.{h}"
+  spec.source_files  = "Classes", "Classes/**/*.{h,swift}"
   spec.exclude_files = "Classes/Exclude"
 
      spec.dependency "Alamofire"
