@@ -11,13 +11,15 @@ import Alamofire
 public protocol CommunicateVCDelegate : AnyObject {
     func getIFrameUrl(urlData:String)
 }
-public class CommunicateVC {
+public class CommunicateVC:NSObject {
     var baseUrlId : String?
     var projectIdVal = ""
     var hostEmailId = ""
     var myUrl = ""
     public weak var tokenDelegate: CommunicateVCDelegate?
-
+    public override init() {
+        super.init()
+    }
     public func createToken(baseUrl:String, projectId:String, hostEmail:String)  {
         baseUrlId = baseUrl
         projectIdVal = projectId
