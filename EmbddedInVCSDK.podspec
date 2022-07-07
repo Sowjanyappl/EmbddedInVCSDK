@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
 
   spec.license      = "MIT"
 
-  spec.author             = { "Sowjanyappl" => "https://github.com/Sowjanyappl/EmbddedInVCSDK.git" }
+  spec.author             = { "Sowjanyappl" => "sowjanya@peoplelinkvc.com" }
 
  
 
