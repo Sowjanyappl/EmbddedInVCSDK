@@ -118,7 +118,7 @@ public class CommunicateVC:NSObject {
             }
            // roomUrlString = "https://\(subDomain).invc.vc/\(sessionId)?token=\(token)&projectId=62c2d064468f48722e5b4af8&uid=\(base64Encoded)"
             
-          let  roomUrlString = "https://apps.invc.vc/\(sessionId)?token=\(token)&projectId=62c2d064468f48722e5b4af8&uid=\(base64Encoded)"
+          let  roomUrlString = "https://apps.invc.vc/\(sessionId)?token=\(token)&projectId=\(projectIdVal)&uid=\(base64Encoded)"
             tokenDelegate?.getIFrameUrl(urlData: roomUrlString, isSuccess: true)
         }
         
